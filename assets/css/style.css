@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Blinker&family=Caladea&family=Poppins:ital@1&family=Tektur&display=swap");
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+:root {
+  --font-one: "Blinker", sans-serif;
+  --font-two: "Caladea", serif;
+  --font-three: "Poppins", sans-serif;
+  --font-four: "Tektur", cursive;
+}
+* {
+  font-family: var(--font-one);
+  box-sizing: border-box;
+}
+.font-one {
+  font-family: var(--font-one);
+}
+.font-two {
+  font-family: var(--font-two);
+}
+.font-three {
+  font-family: var(--font-three);
+}
+.font-four {
+  font-family: var(--font-four);
+}
+
+/* CSS for sidebar */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Start with sidebar hidden */
+  width: 250px;
+  height: 100vh;
+  /* background-color: var(--bg-sec); */
+  transition: left 0.3s ease-in-out; /* Smooth transition animation */
+}
+
+/* CSS for sidebar content */
+#sidebar-content {
+  padding: 5px;
+}
+
+/* CSS for main content */
+#main-content {
+  transition: margin-left 0.3s ease-in-out; /* Smooth transition animation */
+  height: 100vh;
+  /* background:var(--bg-pri); */
+  margin-left: 0;
+}
+
+/* CSS for button to open/close the sidebar */
+#sidebar-toggle {
+  /* position: fixed;
+        top: 10px;
+        left: 10px; */
+  cursor: pointer;
+}
+
+/* CSS for open and shift classes */
+#sidebar.open {
+  left: 0; /* Show the sidebar */
+}
+
+#main-content.shift {
+  margin-left: 250px; /* Shift the main content */
+}
+#sidebar-content a {
+  text-align: left;
+  text-decoration: none;
+  /* font-size: 19px; */
+  /* color: var(--pri-text); */
+}
+#sidebar-content ul {
+  align-items: start;
+  justify-content: start;
+  list-style: none;
+}
+#sidebar-togglex {
+  display: none;
+}
+.odd {
+  background: white !important;
+}
+.add_cat_model {
+  position: fixed;
+  top: 0;
+  background: #00000064;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.inner_add_cat_model {
+  position: relative;
+  top: 50px;
+  /* left: 15%; */
+  background: var(--white);
+  box-shadow: 0px 4px 5px #000000a1;
+  animation: modelIn 600ms;
+}
+.edit_cat_model {
+  position: fixed;
+  top: 0;
+  background: #00000064;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.inner_edit_cat_model {
+  position: relative;
+  top: 50px;
+  /* left: 15%; */
+  background: var(--white);
+  box-shadow: 0px 4px 5px #000000a1;
+  animation: modelIn 600ms;
+}
+.delete_cat_model {
+  position: fixed;
+  top: 0;
+  background: #00000064;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.inner_delete_cat_model {
+  position: relative;
+  top: 50px;
+  /* left: 15%; */
+  background: var(--white);
+  box-shadow: 0px 4px 5px #000000a1;
+  animation: modelIn 600ms;
+}
+.add_item_model {
+  position: fixed;
+  top: 0;
+  background: #00000064;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.inner_add_item_model {
+  position: relative;
+  top: 20px;
+  /* left: 15%; */
+  background: var(--white);
+  box-shadow: 0px 4px 5px #000000a1;
+  animation: modelIn 600ms;
+}
+.add_to_item_model {
+  position: fixed;
+  top: 0;
+  background: #00000064;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.inner_add_to_item_model {
+  position: relative;
+  top: 50px;
+  /* left: 15%; */
+  background: var(--white);
+  box-shadow: 0px 4px 5px #000000a1;
+  animation: modelIn 600ms;
+}
+.selectItem_model {
+  position: fixed;
+  top: 0;
+  background: #6e928b64;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.inner_selectItem_model {
+  position: relative;
+  top: 50px;
+  /* left: -7%; */
+
+  background: var(--white);
+  box-shadow: 0px 2px 5px #00347897;
+  animation: modelIn 600ms;
+}
+.completeSaleModel {
+  position: fixed;
+  top: 0;
+  background: #6e928b64;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.innerCompleteSaleModel {
+  position: relative;
+  top: 50px;
+  /* left: -7%; */
+
+  background: var(--white);
+  box-shadow: 0px 2px 5px #00347897;
+  animation: modelIn 600ms;
+}
+
+@keyframes modelIn {
+  0% {
+    top: 0;
+  }
+}
+
+/* CSS for drop-down menu */
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  #sidebar-togglex {
+    display: block;
+    cursor: pointer;
+  }
+  #sidebar {
+    width: 100%; /* Occupy full width */
+    left: -100%; /* Hide the sidebar initially */
+    transition: left 0.3s ease-in-out; /* Smooth transition animation */
+  }
+
+  #main-content.shift {
+    margin-left: 0; /* Remove margin for main content */
+  }
+
+  #sidebar.open {
+    left: 0; /* Show the sidebar */
+  }
+}
+
+.finalizingSale {
+  animation: fromDown 600ms;
+}
+
+@keyframes fromDown {
+  0% {
+    margin-top: 20px;
+  }
+}
+.sales_dashboard_wraper {
+  display: grid;
+  grid-template-columns: 15% 64% 19%;
+  grid-gap: 10px;
+}
+.sales_dashboard_wraperx {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-gap: 10px !important;
+}
+
+#makeSale {
+  padding: 13px;
+  font-size: 1.4rem;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: var(--font-four);
+  background-image: linear-gradient(to top, var(--pri-color), var(--sec-color));
+}
+.saleBtn {
+  padding: 5px;
+  /* font-size: 1.4rem; */
+  align-items: center;
+  text-align: center;
+  /* font-weight: 600; */
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: var(--font-four);
+  background-image: linear-gradient(to top, var(--pri-color), var(--sec-color));
+}
+#makeSale:hover {
+  background-image: linear-gradient(to top, var(--sec-color), var(--sec-color));
+}
+.saleBtn:hover {
+  background-image: linear-gradient(to top, var(--sec-color), var(--sec-color));
+}
+.linearBg:hover {
+  background-image: linear-gradient(to top, var(--sec-color), var(--sec-color));
+}
+.linearBg{
+  padding: 0;
+  font-size: 1rem;
+  align-items: center;
+  text-align: center;
+  /* font-weight: 600; */
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: var(--font-four);
+  background-image: linear-gradient(to top, var(--pri-color), var(--sec-color));
+}
+#notfyBtn {
+  font-size: 1.4rem;
+  margin-right: 20px;
+}
+
+#notifyContainer {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  /* margin-top: 20px; */
+}
+
+#notifyContainer a {
+  display: block;
+  text-decoration: none;
+  /* color: #333; */
+  padding: 8px;
+}
+
+#notifyContainer a:hover {
+  background-color: #ddd;
+}
+
+/* styles.css */
+#profileDropDown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+}
+
+#profileDropDown a {
+  display: block;
+  text-decoration: none;
+  /* color: #333; */
+  padding: 8px;
+}
+
+#profileDropDown a:hover {
+  background-color: #ddd;
+}
+
+#profileBtn .fa-user{
+  font-size: 1.4rem;
+}
+.alert-circle{
+  color: red;
+  font-size: 12px;
+  position: relative !important;
+  margin-top: -25px !important;
+
+}
+.siteHL{
+  /* font-size: 18px; */
+}
+.siteHL img{
+  width: 100px;
+  
+}
+.enlarge{
+  font-size: 1.5rem;
+}
+#subLinks a{
+  padding-left: 20px;
+}
+#newSchedules{
+  overflow-y: scroll;
+  height: fit-content;
+  max-height: 60vh;
+  scroll-behavior: smooth;
+}
+.balFigure{
+  font-size: 1.4rem;
+}
