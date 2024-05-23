@@ -19,14 +19,14 @@ $("#loginWelix").click(function (e) {
             },
             dataType: "html",
             success: function (response) {
-                if(response == "success"){
+                if(response === '1'){
                     $("#noUser").hide();
                     $("#success").fadeIn();
                     setTimeout(() => {
                         document.location = "index";  
                     }, 600);
                    
-                }else if(response == 2){
+                }else if(response === 2){
                     $("#noUser").fadeIn();
                 }else{
                     alert(response);

@@ -315,7 +315,7 @@ if (isset($_POST['loginUser'])) {
                 $_SESSION['expSeasion'] = "today";
             }
 
-            echo "success";
+            echo 1;
         } else {
             echo 2;
         }
