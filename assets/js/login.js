@@ -10,7 +10,7 @@ $("#loginWelix").click(function (e) {
         inputEmpty("#password");
     }else{
         $.ajax({
-            type: "post",
+            type: "post", 
             url: url(),
             data: {
                 loginUser: "loginUser",
@@ -19,14 +19,14 @@ $("#loginWelix").click(function (e) {
             },
             dataType: "html",
             success: function (response) {
-                if(response === 1){
+                if(response == 1){
                     $("#noUser").hide();
                     $("#success").fadeIn();
                     setTimeout(() => {
                         document.location = "index";  
                     }, 600);
                    
-                }else if(response === 2){
+                }else if(response == 2){
                     $("#noUser").fadeIn();
                 }else{
                     alert(response);
