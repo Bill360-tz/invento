@@ -30,7 +30,7 @@ function db($tableName, $data) {
     $stmt->bind_param($types, ...array_values($data));
 
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -57,7 +57,7 @@ function delete($table, $column, $condition){
     $stmt-> bind_param('s',$condition);
 
     if($stmt-> execute()){
-        echo "success";
+        echo 1;
     }else{
         echo $stmt-> error;
     }

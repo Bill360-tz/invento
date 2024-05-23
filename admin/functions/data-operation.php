@@ -19,7 +19,7 @@ if (isset($_POST['saveNewCat'])) {
 
     // Execute the statement
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo "Error inserting data: " . $stmt->error;
     }
@@ -41,7 +41,7 @@ if (isset($_POST['saveCatEdit'])) {
 
     // Execute the statement
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo "Error updating data: " . $stmt->error;
     }
@@ -65,7 +65,7 @@ if(isset($_POST['checkPassword'])){
         echo mysqli_error($conn);
     }else{
         if(mysqli_num_rows($query)>0){
-            echo "success";
+            echo 1;
         }else{
             echo "none";
         }
@@ -89,7 +89,7 @@ if (isset($_POST['addItem'])) {
 
     // Execute the statement
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo "Error inserting data: " . $stmt->error;
     }
@@ -114,7 +114,7 @@ if (isset($_POST['editItem'])) {
 
     // Execute the statement
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo "Error inserting data: " . $stmt->error;
     }
@@ -132,7 +132,7 @@ if (isset($_POST['addToItem'])) {
     $item_quantity = $_POST['amountToAdd'];
 
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo "Error inserting data: " . $stmt->error;
     }
@@ -149,7 +149,7 @@ if (isset($_POST['saveSMSTemplate'])) {
     $smsContent = $_POST['smsContent'];
 
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         $stmt->error;
     }
@@ -184,7 +184,7 @@ if (isset($_POST['tempSelected'])) {
     $scheduled_status = 'active';
 
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo $stmt->error;
     }
@@ -197,7 +197,7 @@ if (isset($_POST['deleteSch'])) {
     $scheduled_id = $_POST['scheduled_id'];
 
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo $stmt->error;
     }
@@ -329,7 +329,7 @@ if (isset($_POST['setSeason'])) {
 
     $_SESSION['season'] = $season;
 
-    echo "success";
+    echo 1;
 }
 
 if (isset($_POST['setExpSeason'])) {
@@ -337,7 +337,7 @@ if (isset($_POST['setExpSeason'])) {
 
     $_SESSION['expSeasion'] = $aaa;
 
-    echo "success";
+    echo 1;
 }
 
 if (isset($_POST['insetExpenses'])) {
@@ -409,7 +409,7 @@ if (isset($_POST['editExpenses'])) {
     if (!$query) {
         echo mysqli_error($conn);
     } else {
-        echo "success";
+        echo 1;
     }
 }
 if (isset($_POST['editStoreItem'])) {
@@ -427,7 +427,7 @@ if (isset($_POST['editStoreItem'])) {
     if (!$query) {
         echo mysqli_error($conn);
     } else {
-        echo "success";
+        echo 1;
     }
 }
 if (isset($_POST['editOrderedItem'])) {
@@ -445,7 +445,7 @@ if (isset($_POST['editOrderedItem'])) {
     if (!$query) {
         echo mysqli_error($conn);
     } else {
-        echo "success";
+        echo 1;
     }
 }
 
@@ -483,10 +483,10 @@ function updateInvoPayment($invo_id, $paid_amount)
                     if (!$uquery) {
                         echo mysqli_error($conn);
                     } else {
-                        return "success";
+                        return 1;
                     }
                 } else {
-                    return "success";
+                    return 1;
                 }
             } else {
                 echo $invo_id;
@@ -501,7 +501,7 @@ if (isset($_POST['addPayToCust'])) {
     $custPayMethod = $_POST['custPayMethod'];
     $office_id = $_SESSION['welix_loged_in']['office_id'];
 
-    if (updateInvoPayment($invo_id, $paid_amount) == "success") {
+    if (updateInvoPayment($invo_id, $paid_amount) == 1) {
         $sql = "INSERT INTO payments (pay_id,invoice_no, office_id, paid_amount, pay_method)  VALUES(
             '','$invo_id', $office_id, '$paid_amount','$custPayMethod'
         )";
@@ -528,10 +528,10 @@ if (isset($_POST['addPayToCust'])) {
                         if (!$queryy) {
                             echo mysqli_error($conn);
                         } else {
-                            echo "success";
+                            echo 1;
                         }
                     } else {
-                        echo "success";
+                        echo 1;
                     }
                 }
             }
@@ -555,7 +555,7 @@ if (isset($_POST['addNewUser'])) {
     $pro_password = md5($uSPass);
 
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo $stmt->error;
     }
@@ -581,7 +581,7 @@ if (isset($_POST['updateUserInfo'])) {
 
     if ($stmt->execute()) {
         $_SESSION['welix_loged_in']['username'] = $fullNAme;
-        echo "success";
+        echo 1;
     } else {
         echo $stmt->error;
     }
@@ -605,7 +605,7 @@ if (isset($_POST['updateUserInfodd'])) {
     $loginPhone = $_POST['loginPhone'];
 
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo $stmt->error;
     }
@@ -748,7 +748,7 @@ if (isset($_POST['chackCode'])) {
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
-            echo "success";
+            echo 1;
         } else {
             echo "incorrect token";
         }
@@ -764,7 +764,7 @@ if (isset($_POST['deleteUser'])) {
     $hiddenId = $_POST['hiddenId'];
 
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo $stmt->error;
     }
@@ -776,7 +776,7 @@ if (isset($_POST['makeAdmin'])) {
     $hiddenId = $_POST['hiddenId'];
 
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo $stmt->error;
     }
@@ -788,7 +788,7 @@ if (isset($_POST['unmakeAdmin'])) {
     $hiddenId = $_POST['hiddenId'];
 
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo $stmt->error;
     }
@@ -800,7 +800,7 @@ if (isset($_POST['deleteItem'])) {
     $item_id = $_POST['item_id'];
 
     if ($stmt->execute()) {
-        echo "success";
+        echo 1;
     } else {
         echo $stmt->error;
     }
@@ -817,7 +817,7 @@ if (isset($_POST['deleteCat'])) {
         $stmt->bind_param("s", $cat_id);
 
         if ($stmt->execute()) {
-            echo "success";
+            echo 1;
         } else {
             echo $stmt->error;
         }
@@ -831,14 +831,14 @@ if (isset($_POST['getCust'])) {
     $_SESSION['start_date'] = $_POST['start_date'];
     $_SESSION['end_date'] = $_POST['end_date'];
 
-    echo "success";
+    echo 1;
 }
 if (isset($_POST['byYear'])) {
     $_SESSION['season'] = 'byYear';
     $_SESSION['year'] = $_POST['year'];
    
 
-    echo "success";
+    echo 1;
 }
 
 if(isset($_POST['deleteEX'])){
@@ -851,7 +851,7 @@ if(isset($_POST['deleteEX'])){
     if(!$query){
         echo mysqli_error($conn);
     }else{
-        echo "success";
+        echo 1;
     }
 }
 if(isset($_POST['deleteStoreItem'])){
@@ -864,7 +864,7 @@ if(isset($_POST['deleteStoreItem'])){
     if(!$query){
         echo mysqli_error($conn);
     }else{
-        echo "success";
+        echo 1;
     }
 }
 if(isset($_POST['deleteOrderedItem'])){
@@ -877,7 +877,7 @@ if(isset($_POST['deleteOrderedItem'])){
     if(!$query){
         echo mysqli_error($conn);
     }else{
-        echo "success";
+        echo 1;
     }
 }
 if(isset($_POST['deleteInvo'])){
@@ -890,7 +890,7 @@ if(isset($_POST['deleteInvo'])){
     if(!$query){
         echo mysqli_error($conn);
     }else{
-        echo "success";
+        echo 1;
     }
 }
 if(isset($_POST['deleteCust'])){
@@ -903,7 +903,7 @@ if(isset($_POST['deleteCust'])){
     if(!$query){
         echo mysqli_error($conn);
     }else{
-        echo "success";
+        echo 1;
     }
 }
 
@@ -937,7 +937,7 @@ if(isset($_POST['deleteBrand'])){
         if(!$query2){
             echo mysqli_error($conn);
         }else{
-            echo "success";
+            echo 1;
         }
     }
 
@@ -1014,7 +1014,7 @@ if(isset($_POST['saveItemsEdits'])){
     $hasSubsEdit = $_POST['hasSubsEdit'];
 
     if($stmt -> execute()){
-        echo "success";
+        echo 1;
     }else{
         echo $stmt -> error;
     }
@@ -1034,7 +1034,7 @@ if(isset($_POST['deleteCatItem'])){
     if(!$query){
         echo mysqli_error($conn);
     }else{
-        echo "success";
+        echo 1;
     }
 }
 
@@ -1048,7 +1048,7 @@ if(isset($_POST['saveBrandEdit'])){
     $re_order = $_POST['re_order'];
 
     if($stmt-> execute()){
-        echo "success";
+        echo 1;
     }else{
         echo $stmt -> error;
     }
@@ -1067,7 +1067,7 @@ if(isset($_POST['smsAllCusts'])){
     if(!$query){
         echo mysqli_error($conn);
     }else{
-        echo "success";
+        echo 1;
         if(mysqli_num_rows($query)>0){
             foreach($query as $cust){
                 $name = $cust['cust_name'];

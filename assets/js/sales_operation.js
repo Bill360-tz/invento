@@ -306,7 +306,7 @@ $("#makeSaleConfirmed").click(function (e) {
       contentType: "application/json",
       success: function (response) {
         // Handle success response from the backend
-        if (response == "success") {
+        if (response == 1) {
           location.reload();
         } else {
           pendingMode = false
@@ -352,7 +352,7 @@ function goToPrint(invoice_no) {
       contentType: "application/json",
       success: function (response) {
         // Handle success response from the backend
-        if (response == "success") {
+        if (response == 1) {
           printWindo = window.open('printReceipt?invoice_no=' + invoice_no, 'WindowName', 'height=700,width=850');
         } else {
           alert(response)

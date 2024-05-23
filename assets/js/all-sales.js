@@ -13,7 +13,7 @@ function toSeason(season) {
         },
         dataType: "html",
         success: function (response) {
-            if (response == "success") {
+            if (response == 1) {
                 location.reload();
             } else {
                 alert(response);
@@ -76,7 +76,7 @@ $("#goCustomized").click(function (e) {
         },
         dataType: "html",
         success: function (response) {
-          if(response == "success"){
+          if(response == 1){
             location.reload();
           }else{
             alert(response);
@@ -99,7 +99,7 @@ $("#goCustomized").click(function (e) {
       },
       dataType: "html",
       success: function (response) {
-        if(response == "success"){
+        if(response == 1){
           location.reload()
         }else{
           alert(response);

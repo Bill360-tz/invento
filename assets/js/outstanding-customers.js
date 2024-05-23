@@ -68,7 +68,7 @@ $("#saveSMSTemplate").click(function (e) {
       },
       dataType: "html",
       success: function (response) {
-        if (response == "success") {
+        if (response == 1) {
           location.reload();
         } else {
           alert(response);
@@ -112,7 +112,7 @@ $("#addSchediledList").click(function (e) {
       },
       dataType: "html",
       success: function (response) {
-        if (response == "success") {
+        if (response == 1) {
           fetchSchdules();
         } else {
           alert(response);
@@ -187,7 +187,7 @@ function removeSc(aaa) {
     },
     dataType: "html",
     success: function (response) {
-      if (response == "success") {
+      if (response == 1) {
         fetchSchdules();
       } else {
         alert(response);

@@ -42,7 +42,7 @@ $("#saveAddItem").click(function (e) {
         },
         dataType: "html",
         success: function (response) {
-          if (response == "success") {
+          if (response == 1) {
             location.reload();
           } else {
             alert(response);
@@ -132,7 +132,7 @@ $("#addItemToCat").click(function (e) {
       },
       dataType: "html",
       success: function (response) {
-        if (response == "success") {
+        if (response == 1) {
           location.reload();
         } else {
           alert(response);
@@ -166,7 +166,7 @@ $("#deleteItemConfirm").click(function (e) {
     },
     dataType: "html",
     success: function (response) {
-      if (response == "success") {
+      if (response == 1) {
         location.reload();
       } else {
         alert(response);

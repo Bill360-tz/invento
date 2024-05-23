@@ -16,7 +16,7 @@ function insertInvoice($invoice_no, $cust_phone, $total_price, $discount, $amout
     }
     // Execute the statement
     if ($stmt->execute()) {
-        // echo "success";
+        // echo 1;
     } else {
         echo "Error inserting data on invoices: " . $stmt->error;
     }
@@ -35,7 +35,7 @@ function insertPayment($invoice_no, $paid_amount, $pay_method)
     $office_id = $_SESSION['welix_loged_in']['office_id'];
     // Execute the statement
     if ($stmt->execute()) {
-        // echo "success";
+        // echo 1;
     } else {
         echo "Error inserting data on payments: " . $stmt->error;
     }
@@ -52,7 +52,7 @@ function updateItems($item_id, $item_count)
 
     // Execute the statement
     if ($stmt->execute()) {
-        // echo "success";
+        // echo 1;
     } else {
         echo "Error inserting data on items: " . $stmt->error;
     }
@@ -87,7 +87,7 @@ function insertSoldItems($invoice_no, $item_id, $item_count, $item_cost)
     $total_cost = (int)$item_count * (int)$total_price;
     // Execute the statement
     if ($stmt->execute()) {
-        // echo "success";
+        // echo 1;
     } else {
         echo "Error inserting data on sold_tems: " . $stmt->error;
     }
@@ -105,7 +105,7 @@ function insertCustomer($cust_phone,$cust_name){
     $office_id = $_SESSION['welix_loged_in']['office_id'];
     // Execute the statement
     if ($stmt->execute()) {
-        // echo "success";
+        // echo 1;
     } else {
         echo "Error inserting data on payments: " . $stmt->error;
     }
@@ -142,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
         }
-        echo "success";
+        echo 1;
     } else {
         // Return an error response if the JSON data could not be decoded
         http_response_code(400); // Bad Request

@@ -20,7 +20,7 @@ function setExpSeason(aaa) {
         },
         dataType: "html",
         success: function (response) {
-            if (response == "success") {
+            if (response == 1) {
                 location.reload();
             } else {
                 alert(response);
@@ -70,7 +70,7 @@ $("#saveExpense").click(function (e) {
                 },
                 dataType: "html",
                 success: function (response) {
-                    if (response == "success") {
+                    if (response == 1) {
                         location.reload()
                     } else {
                         alert(response);
@@ -117,7 +117,7 @@ $("#saveExpenseEdit").click(function (e) {
             },
             dataType: "html",
             success: function (response) {
-                if (response == "success") {
+                if (response == 1) {
                     location.reload()
                 } else {
                     console.log(response);
@@ -169,7 +169,7 @@ $("#deleteCatConfirmed").click(function (e) {
       },
       dataType: "html",
       success: function (response) {
-        if(response == "success"){
+        if(response == 1){
           location.reload()
         }else{
           alert(response)

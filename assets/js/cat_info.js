@@ -26,7 +26,7 @@ $("#saveBrand").click(function (e) {
             },
             dataType: "html",
             success: function (response) {
-                if (response == "success") {
+                if (response == 1) {
                     location.reload()
                 } else {
                     alert(response)
@@ -49,7 +49,7 @@ function deleteBrand(brand_id, brand_name) {
             },
             dataType: "html",
             success: function (response) {
-                if (response == "success") {
+                if (response == 1) {
                     location.reload()
                 } else {
                     alert(response)
@@ -72,7 +72,7 @@ function deleteCatItem(item_id, item_name) {
             },
             dataType: "html",
             success: function (response) {
-                if (response == "success") {
+                if (response == 1) {
                     location.reload()
                 } else {
                     alert(response)
@@ -215,7 +215,7 @@ $("#addItemToCat").click(function (e) {
             },
             dataType: "html",
             success: function (response) {
-                if (response == "success") {
+                if (response == 1) {
                     location.reload();
                 } else {
                     alert(response);
@@ -324,7 +324,7 @@ $("#addItemToDb").click(function (e) {
                 },
                 dataType: "html",
                 success: function (response) {
-                    if (response == "success") {
+                    if (response == 1) {
                         location.reload();
                     } else {
                         alert(response);
@@ -373,7 +373,7 @@ $("#addItemToDb").click(function (e) {
                 },
                 dataType: "html",
                 success: function (response) {
-                    if (response == "success") {
+                    if (response == 1) {
                         location.reload();
                     } else {
                         alert(response);
@@ -455,7 +455,7 @@ $("#EditItemToCat").click(function (e) {
                 },
                 dataType: "html",
                 success: function (response) {
-                    if (response == "success") {
+                    if (response == 1) {
                         location.reload()
                     } else {
                         alert(response)
@@ -481,7 +481,7 @@ function deleteItem(item_id, item_name) {
             },
             dataType: "html",
             success: function (response) {
-                if (response == "success") {
+                if (response == 1) {
                     location.reload()
                 } else {
                     alert(response);
@@ -533,7 +533,7 @@ $("#saveAddItem").click(function (e) {
                 },
                 dataType: "html",
                 success: function (response) {
-                    if (response == "success") {
+                    if (response == 1) {
                         location.reload();
                     } else {
                         alert(response);
@@ -583,7 +583,7 @@ $("#saveBrandEdits").click(function (e) {
             },
             dataType: "html",
             success: function (response) {
-                if (response == "success") {
+                if (response == 1) {
                     location.reload()
                 } else {
                     alert(response);

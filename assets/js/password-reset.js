@@ -13,7 +13,7 @@ $("#pasReTCd").click(function (e) {
         },
         dataType: "html",
         success: function (response) {
-            if(response == "success"){
+            if(response == 1){
                 
             }else{
                 alert(response);
