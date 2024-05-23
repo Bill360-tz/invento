@@ -5,6 +5,8 @@ function conn()
     return $conn;
 }
 include("welix.php");
+
+echo "Hello World";
 function  fetchCats()
 {
     include("connection.php");
