@@ -38,7 +38,7 @@ function success(state = false) {
   }
 }
 function url() {
-  return "../data-operation.php";
+  return "../admin/functions/data-operation.php";
 }
 
 function inputEmpty(a) {
