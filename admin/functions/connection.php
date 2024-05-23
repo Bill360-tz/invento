@@ -18,7 +18,7 @@ if (!$conn) {
 }
 
 // Set up SSL for the connection
-if (!mysqli_ssl_set($conn, NULL, NULL, "../assets/Microsoft RSA Root Certificate Authority 2017.crt", NULL, NULL)) {
+if (!mysqli_ssl_set($conn, NULL, NULL, "../../assets/Microsoft RSA Root Certificate Authority 2017.crt", NULL, NULL)) {
     die('MySQLi SSL setup failed: ' . mysqli_error($conn));
 }
 
@@ -28,7 +28,7 @@ if (!mysqli_real_connect($conn, "william.mysql.database.azure.com", "williamUser
 }
 
 // Connection successful
-echo 'Success... ' . mysqli_get_host_info($conn) . "\n";
+// echo 'Success... ' . mysqli_get_host_info($conn) . "\n";
 
 // You can now use $conn for your queries
 
