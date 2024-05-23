@@ -38,7 +38,7 @@ function success(state = false) {
   }
 }
 function url() {
-  return "https://williamkimambo.azurewebsites.net/admin/functions/data-operation.php";
+  return "../data-operation.php";
 }
 
 function inputEmpty(a) {
