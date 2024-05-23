@@ -18,9 +18,9 @@ if (!$conn) {
 }
 
 // Set up SSL for the connection
-if (!mysqli_ssl_set($conn, NULL, NULL, "../../assets/Microsoft RSA Root Certificate Authority 2017.crt", NULL, NULL)) {
-    die('MySQLi SSL setup failed: ' . mysqli_error($conn));
-}
+// if (!mysqli_ssl_set($conn, NULL, NULL, "../../assets/Microsoft RSA Root Certificate Authority 2017.crt", NULL, NULL)) {
+//     die('MySQLi SSL setup failed: ' . mysqli_error($conn));
+// }
  
 // Attempt to connect to the database
 if (!mysqli_real_connect($conn, "william.mysql.database.azure.com", "williamUser", "Writer@becket#360", "invento_db", 3306, NULL, MYSQLI_CLIENT_SSL)) {
