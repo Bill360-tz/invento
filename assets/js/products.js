@@ -193,31 +193,35 @@ $(".closeDescr").click(function (e) {
 $("#toggleStockValue").click(function (e) {
   e.preventDefault();
   // alert("ok")
+  if (pendingMode == false) {
 
-  const stoPass = $("#stoPass").val();
-  let view = true;
+    pendingMode = true
+    const stoPass = $("#stoPass").val();
+    let view = true;
 
-  if (view == true) {
-    if (stoPass === "") {
-      inputEmpty("#stoPass")
-    } else {
-      // alert(stoPass);
+    if (view == true) {
+      if (stoPass === "") {
+        inputEmpty("#stoPass")
+      } else {
+        // alert(stoPass);
 
 
-      $.ajax({
-        type: "post",
-        url: url(),
-        data: {
-          checkPassword: "Check",
-          password: stoPass
-        },
-        dataType: "html",
-        success: function (response) {
-          alert(response)
-        }
-      });
+        $.ajax({
+          type: "post",
+          url: url(),
+          data: {
+            checkPassword: "Check",
+            password: stoPass
+          },
+          dataType: "html",
+          success: function (response) {
+            alert(response)
+          }
+        });
+      }
     }
   }
+
 
 
 });
