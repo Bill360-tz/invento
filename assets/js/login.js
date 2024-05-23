@@ -23,7 +23,7 @@ $("#loginWelix").click(function (e) {
                     $("#noUser").hide();
                     $("#success").fadeIn();
                     setTimeout(() => {
-                        document.location = "index";  
+                        document.location = "index.php";  
                     }, 600);
                    
                 }else if(response == 2){
