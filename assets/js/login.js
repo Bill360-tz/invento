@@ -19,7 +19,7 @@ $("#loginWelix").click(function (e) {
             },
             dataType: "html",
             success: function (response) {
-                if(response === '1'){
+                if(response === 1){
                     $("#noUser").hide();
                     $("#success").fadeIn();
                     setTimeout(() => {
