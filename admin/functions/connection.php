@@ -33,6 +33,5 @@ echo 'Success... ' . mysqli_get_host_info($conn) . "\n";
 // You can now use $conn for your queries
 
 // Close the connection when done
-mysqli_close($conn);
 ?>
 

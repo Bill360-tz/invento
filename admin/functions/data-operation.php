@@ -1103,4 +1103,7 @@ if(isset($_POST['smsAllCusts'])){
             }
         }
     }
+}else{
+mysqli_close($conn);
+
 }
