@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['welix_loged_in'])) {
-    header("location: login");
+    header("location: login.php");
 }
 if (!isset($_GET['id'])) {
     echo "<script> document.location = 'setting'</script>";

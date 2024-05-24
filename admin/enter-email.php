@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['welix_loged_in'])) {
-    header("location: index");
+    header("location: index.php");
 }
 
 $tk = "agsvdvuyefyfFJKFKUYfvyfukyf";

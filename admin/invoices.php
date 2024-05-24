@@ -2,7 +2,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['welix_loged_in'])) {
-    header("location: login");
+    header("location: login.php");
 }
 ?>
 <html lang="en">
